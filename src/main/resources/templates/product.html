@@ -144,28 +144,28 @@
         </div>
 
         <div class="row course-listing">
-
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-md-12">
                         <img src="../static/images/SpringIntroThumb.png"
-                            th:src="@{/images/SpringIntroThumb.png}" th:alt-title="'Introduction to Spring'"
+                            th:src="@{'/images/' + ${product.imageUrl}}" th:alt-title="${product.courseSubtitle}"
                             width="506px" height="290px" class="center-block"/>
                     </div>
                 </div>
-                <div class="row course-listing-extra-info col-md-12">
-                    <div class="col-md-8">
+                <div class="row course-listing-extra-info">
+                    <div class="col-8">
                         <img align="left" alt="John Thompson"
                              src="../static/images/instructor_jt.jpg"
-                             th:src="@{/images/instructor_jt.jpg}" th:alt-title="'John Thompson'"
+                             th:src="@{'/images/' + ${product.author.image}}" th:alt-title="${product.author.firstName+ ' ' + product.author.lastName}"
                              class="img-circle"/>
                         <div class="small course-author-name" th:text="${product.author.firstName+ ' ' + product.author.lastName}">Author name</div>
                     </div>
-                    <div class="col-md-1">
+                    <div class="col-1" style="text-align: left">
                         <div class="small course-price" th:text="${product.price >0 ? '$'+product.price : 'FREE'}">Price</div>
                     </div>
                 </div>
             </div>
+
 
             <div class="col-md-6">
                 <div>

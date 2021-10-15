@@ -129,7 +129,6 @@
         }
     </style>
 
-
 </head>
 <body>
 
@@ -151,23 +150,24 @@
 
         <div class="row course-listing">
             <div class="row course-listing">
-                <div th:each="product,it : ${products}">
-                    <div th:if="${(it.count gt 0 and it.count lt 4)}">
-                        <div th:replace="fragments/productdiv :: productdiv"></div>
-                    </div>
-                </div>
+                <th:block th:each="product,it : ${products}">
+                    <th:block th:if="${(it.count gt 0 and it.count lt 4)}">
+                        <th:block th:replace="fragments/productdiv :: productdiv"></th:block>
+                    </th:block>
+                </th:block>
             </div>
         </div>
 
         <div class="row course-listing">
             <div class="row course-listing">
-                <div th:each="product,it : ${products}">
-                    <div th:if="${(it.count gt 3 and it.count lt 7)}">
-                        <div th:replace="fragments/productdiv :: productdiv"></div>
-                    </div>
-                </div>
+                <th:block th:each="product,it : ${products}">
+                    <th:block th:if="${(it.count gt 3 and it.count lt 7)}">
+                        <th:block th:replace="fragments/productdiv :: productdiv"></th:block>
+                    </th:block>
+                </th:block>
             </div>
         </div>
+
 
         <div class="row course-list list" th:remove="all">
             <div class="col-md-4">
@@ -190,8 +190,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="row course-listing-extra-info col-xs-12">
-                        <div class="col-xs-8">
+                    <div class="row course-listing-extra-info">
+                        <div class="col-8">
                             <img align="left" alt="John Thompson"
                                  src="../static/images/instructor_jt.jpg"
                                  th:src="@{/images/instructor_jt.jpg}" th:alt-title="'John Thompson'"
@@ -199,10 +199,10 @@
                             <div class="small course-author-name">
                                 John Thompson
                             </div>
-                            <div class="col-xs-4">
-                                <div class="small course-price">
-                                    FREE
-                                </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="small course-price">
+                                FREE
                             </div>
                         </div>
                     </div>
@@ -229,17 +229,17 @@
                             </div>
                         </a>
                     </div>
-                    <div class="row course-listing-extra-info col-xs-12">
-                        <div class="col-xs-8">
+                    <div class="row course-listing-extra-info col-12">
+                        <div class="col-8">
                             <img align="left" alt="John Thompson"
                                  src="../static/images/instructor_jt.jpg"
                                  th:src="@{/images/instructor_jt.jpg}" th:alt-title="'John Thompson'"
-                                class="img-circle"/>
+                                 class="img-circle"/>
                             <div class="small course-author-name">
                                 John Thompson
                             </div>
                         </div>
-                        <div class="col-xs-4">
+                        <div class="col-4">
                             <div class="small course-price">
                                 $99
                             </div>
@@ -269,8 +269,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="row course-listing-extra-info col-xs-12">
-                        <div class="col-xs-8">
+                    <div class="row course-listing-extra-info col-12">
+                        <div class="col-8">
                             <img align="left" alt="John Thompson"
                                  src="../static/images/instructor_jt.jpg"
                                  th:src="@{/images/instructor_jt.jpg}" th:alt-title="'John Thompson'"
@@ -279,7 +279,7 @@
                                 John Thompson
                             </div>
                         </div>
-                        <div class="col-xs-4">
+                        <div class="col-4">
                             <div class="small course-price">
                                 $99
                             </div>
@@ -309,8 +309,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="row course-listing-extra-info col-xs-12">
-                        <div class="col-xs-8">
+                    <div class="row course-listing-extra-info col-12">
+                        <div class="col-8">
                             <img align="left" alt="John Thompson"
                                  src="../static/images/instructor_jt.jpg"
                                  th:src="@{/images/instructor_jt.jpg}" th:alt-title="'John Thompson'"
@@ -319,7 +319,7 @@
                                 John Thompson
                             </div>
                         </div>
-                        <div class="col-xs-4">
+                        <div class="col-4">
                             <div class="small course-price">
                                 $15
                             </div>
@@ -349,8 +349,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="row course-listing-extra-info col-xs-12">
-                        <div class="col-xs-8">
+                    <div class="row course-listing-extra-info col-12">
+                        <div class="col-8">
                             <img align="left" alt="John Thompson"
                                  src="../static/images/instructor_jt.jpg"
                                  th:src="@{/images/instructor_jt.jpg}" th:alt-title="'John Thompson'"
@@ -359,7 +359,7 @@
                                 John Thompson
                             </div>
                         </div>
-                        <div class="col-xs-4">
+                        <div class="col-4">
                             <div class="small course-price">
                                 $147
                             </div>
@@ -389,8 +389,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="row course-listing-extra-info col-xs-12">
-                        <div class="col-xs-8">
+                    <div class="row course-listing-extra-info col-12">
+                        <div class="col-8">
                             <img align="left" alt="John Thompson"
                                  src="../static/images/instructor_jt.jpg"
                                  th:src="@{/images/instructor_jt.jpg}" th:alt-title="'John Thompson'"
@@ -399,7 +399,7 @@
                                 John Thompson
                             </div>
                         </div>
-                        <div class="col-xs-4">
+                        <div class="col-4">
                             <div class="small course-price">
                                 $15
                             </div>
@@ -407,7 +407,6 @@
                     </div>
                 </div>
             </div>
-
 
         </div>
 
