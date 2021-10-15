@@ -164,6 +164,16 @@
                         <div class="small course-price" th:text="${product.price >0 ? '$'+product.price : 'FREE'}">Price</div>
                     </div>
                 </div>
+
+                <div class="row col-12">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" th:each="cat : ${product.productCategories}">
+                            <a href="#" th:text="${cat.category}">Cat 1</a>
+                        </li>
+                        <li class="breadcrumb-item" th:remove="all"><a href="#">Cat 2</a></li>
+                        <li class="breadcrumb-item" th:remove="all"><a href="#">Cat 3</a></li>
+                    </ol>
+                </div>
             </div>
 
 
