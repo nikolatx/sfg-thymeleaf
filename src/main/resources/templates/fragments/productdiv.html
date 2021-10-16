@@ -33,7 +33,7 @@
                         <img align="left" alt="John Thompson"
                              src="../static/images/instructor_jt.jpg"
                              th:src="@{'/images/' + ${product.author.image}}"
-                             class="img-circle"/>
+                             class="rounded-circle"/>
                         <div th:text="${product.author.firstName + ' ' + product.author.lastName}">Author name</div>
                     </div>
                     <div class="col-2" th:text="${product.price>0 ? '$'+product.price : 'FREE'}">Price</div>

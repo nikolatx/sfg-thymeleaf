@@ -157,7 +157,7 @@
                         <img align="left" alt="John Thompson"
                              src="../static/images/instructor_jt.jpg"
                              th:src="@{'/images/' + ${product.author.image}}" th:alt-title="${product.author.firstName+ ' ' + product.author.lastName}"
-                             class="img-circle"/>
+                             class="rounded-circle"/>
                         <div class="small course-author-name" th:text="${product.author.firstName+ ' ' + product.author.lastName}">Author name</div>
                     </div>
                     <div class="col-1" style="text-align: left">
