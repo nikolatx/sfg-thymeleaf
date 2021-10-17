@@ -13,8 +13,8 @@ import javax.validation.Valid;
 public class CheckoutController {
 
     @GetMapping("/checkout")
-    public String checkoutForm(CheckoutCommand checkoutCommand) {
-        //model.addAttribute("checkoutCommand", new CheckoutCommand());
+    public String checkoutForm(Model model) {
+        model.addAttribute("checkoutCommand", new CheckoutCommand());
         return "checkoutform";
     }
 
