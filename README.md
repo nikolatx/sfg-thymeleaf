@@ -1,6 +1,6 @@
 # Using Thymeleaf With Spring Framework
 
-Project shows usage of Thymeleaf templates with Spring Framework:
+Project shows the usage of Thymeleaf templates with Spring Framework:
 - configuring Spring MVC with Spring Boot to display Thymeleaf templates
 - using Spring Message bundles for internationalized text values
 - iterating over lists to display tabular content
@@ -11,5 +11,5 @@ Project shows usage of Thymeleaf templates with Spring Framework:
 - using fragments
 - using Thymeleaf Spring Security extension to show, or not to show content to users.
 
-Project was created through the Mastering Thymeleaf with Spring Boot course.
+Project was created through the Mastering Thymeleaf with Spring Boot course, by John Thompson.
 Comparing to original version, this one is updated to use Bootstrap 5.1.3 and Spring Boot 2.5.5.
